@@ -8,7 +8,7 @@ function Footer() {
     >
       <div
         class="text-center p-3"
-        style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
+        style={{ backgroundColor: "rgba(255, 255, 255, 0.6)" }}
       >
         Developed with 💖 by
         <a class="text-dark pl-1" href="https://www.linkedin.com/in/bandepalli-surya/">

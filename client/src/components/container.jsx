@@ -10,7 +10,7 @@ function Container() {
         <img src={bgImg} className="img-fluid" alt="Background" />
         <ElementsContainer
           style={{
-            backgroundColor: "rgba(69, 69, 69, 0.3)",
+            backgroundColor: "rgba(255, 255, 255, 0.97)",
             display: "flex",
             marginTop: "5rem",
             alignItems: "center",
@@ -18,6 +18,7 @@ function Container() {
             minHeight: "80vh",
             borderRadius: "4rem",
           }}
+          
         ></ElementsContainer>
       </div>
     </div>
