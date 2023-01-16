@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Navbar from "./components/navbar";
+import Container from "./components/container";
 
 function App() {
-  const [backendData, setBackend] = useState({});
-  useEffect(() => {
-    fetch("/modelRes")
-      .then((response) => response.json())
-      .then((data) => setBackend(data));
-  }, {});
   return (
     <div>
-      <h1>{backendData.tester}</h1>
+      <Container />
+      <Navbar />
     </div>
   );
 }

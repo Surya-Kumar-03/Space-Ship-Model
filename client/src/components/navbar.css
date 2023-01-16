@@ -1,0 +1,8 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8); /* transparent white */
+}
+
+.navbar-brand{
+    font-size: xx-large;
+    font-family: 'Open Sans', sans-serif;
+}

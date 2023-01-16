@@ -4,19 +4,13 @@ const request = require("request");
 const app = express();
 require('dotenv').config()
 
-app.get("/modelRes", async function (req, res) {
-  res.json({
-    surya: "testing backend Integratio",
-    tester: "Testing done by Surya",
-  });
-});
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../client/public", "/index.html"));
 });
 
-app.listen(5000, function () {
-  console.log("Server Up and Running at Port 5000");
+app.listen(process.env.PORT || 5000, function () {
+  console.log("Server Up and Running!");
 });
 
 app.get("/get-request", (req, res) => {
