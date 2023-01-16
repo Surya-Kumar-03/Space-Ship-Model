@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "dotenv": "^16.0.3",
     "request": "^2.88.2"
   }
