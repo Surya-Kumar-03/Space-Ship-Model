@@ -1,9 +1,9 @@
 import React from "react";
 import { FormControlLabel, Radio } from "@material-ui/core";
 
-function CryoSleep() {
-  //Result in selectedValue
-  const [selectedValue, setSelectedValue] = React.useState("1"); //Default is Yes
+function Vip() {
+  //Result in selectedVIP
+  const [selectedVIP, setSelectedValue] = React.useState("1"); //Default is Yes
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
   };
@@ -13,15 +13,14 @@ function CryoSleep() {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
-        marginTop:"1rem",
       }}
     >
-      <p>CryoSleep: </p>
+      <p>VIP: </p>
       <FormControlLabel
         style={{ paddingLeft: "1rem" }}
         control={
           <Radio
-            checked={selectedValue === "1"}
+            checked={selectedVIP === "1"}
             onChange={handleChange}
             value="1"
             name="yes-no"
@@ -33,7 +32,7 @@ function CryoSleep() {
       <FormControlLabel
         control={
           <Radio
-            checked={selectedValue === "0"}
+            checked={selectedVIP === "0"}
             onChange={handleChange}
             value="0"
             name="yes-no"
@@ -46,4 +45,4 @@ function CryoSleep() {
   );
 }
 
-export default CryoSleep;
+export default Vip;
