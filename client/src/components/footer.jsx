@@ -12,11 +12,11 @@ function Footer() {
       >
         Developed with 💖 by
         <a class="text-dark pl-1" href="https://www.linkedin.com/in/bandepalli-surya/">
-          Bandepalli Surya
+          Surya
         </a>{" "}
         and{" "}
         <a class="text-dark" href="https://www.linkedin.com/in/abhishekmanikandan">
-          Abhishek Manikandan
+          Abhishek
         </a>
       </div>
     </footer>

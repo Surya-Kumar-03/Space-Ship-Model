@@ -2,6 +2,7 @@ import React from "react";
 import bgImg from "../images/background.jpg";
 import "./container.css";
 import { Container as ElementsContainer } from "@material-ui/core";
+import Elements from "./elements";
 
 function Container() {
   return (
@@ -13,13 +14,14 @@ function Container() {
             backgroundColor: "rgba(255, 255, 255, 0.97)",
             display: "flex",
             marginTop: "5rem",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "center",
             minHeight: "80vh",
             borderRadius: "4rem",
           }}
-          
-        ></ElementsContainer>
+        >
+          <Elements></Elements>
+        </ElementsContainer>
       </div>
     </div>
   );
