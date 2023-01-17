@@ -4,6 +4,7 @@ import Age from "./age";
 import Vip from "./vip";
 import Expense from "./expense";
 import Group from "./groups";
+import RoomNumber from "./roomNumber";
 
 function Elements() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -24,9 +25,18 @@ function Elements() {
     );
   } else if (pageNumber === 2) {
     return (
-      <div style={{ margin: "1rem" }}>
+      <div
+        style={{
+          margin: "1rem",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection:"column"
+        }}
+      >
         <h1>Just a few more!</h1>
         <Group></Group>
+        <RoomNumber></RoomNumber>
       </div>
     );
   }

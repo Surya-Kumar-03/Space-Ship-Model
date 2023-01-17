@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Slider } from "@material-ui/core";
 
 function Age() {
-    // age has value
+    // age has value, isMinor
   const [age, setAge] = React.useState(18);
+  const [isMinor, setIsMinor] = useState(false);
 
   const handleChange = (event, newAge) => {
+    if(age < 18) setIsMinor(true);
     setAge(newAge);
   };
+  
   return (
     <div
       style={{
