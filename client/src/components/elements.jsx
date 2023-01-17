@@ -5,6 +5,7 @@ import Vip from "./vip";
 import Expense from "./expense";
 import Group from "./groups";
 import RoomNumber from "./roomNumber";
+import HomePlanet from "./homePlanet";
 
 function Elements() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -37,6 +38,7 @@ function Elements() {
         <h1>Just a few more!</h1>
         <Group></Group>
         <RoomNumber></RoomNumber>
+        <HomePlanet></HomePlanet>
       </div>
     );
   }
