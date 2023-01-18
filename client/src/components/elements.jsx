@@ -7,6 +7,7 @@ import Group from "./groups";
 import RoomNumber from "./roomNumber";
 import HomePlanet from "./homePlanet";
 import DestinationPlanet from "./destinationPlanet";
+import DeckSelector from "./decks";
 
 function Elements() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -41,6 +42,7 @@ function Elements() {
         <RoomNumber></RoomNumber>
         <HomePlanet></HomePlanet>
         <DestinationPlanet></DestinationPlanet>
+        <DeckSelector></DeckSelector>
       </div>
     );
   }
