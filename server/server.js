@@ -1,11 +1,22 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const path = require("path");
 const request = require("request");
 const app = express();
 require("dotenv").config();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../client/public", "/index.html"));
+});
+
+var ourCryoSleep = 0;
+var ourAge = 18;
+var ourMinor = false;
+app.post("/api/CryoSleep", (req, res) => {
+  ourCryoSleep = req.body.selectedValue;
 });
 
 app.listen(process.env.PORT || 5000, function () {
@@ -15,8 +26,8 @@ app.listen(process.env.PORT || 5000, function () {
 app.get("/get-request", (req, res) => {
   const json = [
     {
-      CryoSleep: 0, //Yes or No Toggle //0 or 1
-      Age: 40.0, //Slider //0 - 100
+      CryoSleep: ourCryoSleep, //Yes or No Toggle //0 or 1
+      Age: ourAge, //Slider //0 - 100
       VIP: 1, //Toggle Yes or No //0 or 1
       RoomService: 4200.0, // Expense Number input 0 - 35000
       FoodCourt: 1539.0, //Expense  number input 0 - 35000
@@ -25,7 +36,7 @@ app.get("/get-request", (req, res) => {
       VRDeck: 0.0, //Expense number input 0 - 35000
       Group: 2, // 1 - 6 //drop down
       Num: 0, // Room Number (1 - 25) (minus 1)
-      Minor: 1, //if age < 18 return 1 else return 0
+      Minor: ourMinor, //if age < 18 return 1 else return 0
       Total_Expense: 8739.0, //Sum of the top 5 expenses
       Expenditure: 1, //if total_expense == 0  return 0 else return 1
       HomePlanet_Earth: 0, //Choose home planet

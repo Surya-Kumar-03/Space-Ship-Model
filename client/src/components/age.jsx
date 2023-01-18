@@ -8,6 +8,7 @@ function Age() {
 
   const handleChange = (event, newAge) => {
     if(age < 18) setIsMinor(true);
+    else setIsMinor(false);
     setAge(newAge);
   };
   

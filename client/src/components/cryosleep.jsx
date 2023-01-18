@@ -1,11 +1,15 @@
 import React from "react";
-import { FormControlLabel, Radio } from "@material-ui/core";
+import { AppBar, FormControlLabel, Radio } from "@material-ui/core";
+import axios from "axios";
 
 function CryoSleep() {
   //Result in selectedValue
   const [selectedValue, setSelectedValue] = React.useState("1"); //Default is Yes
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
+    axios.post("/api/CryoSleep", {
+      selectedValue: event.target.value
+    })
   };
   return (
     <div
