@@ -15,6 +15,7 @@ app.get("/", function (req, res) {
 var ourCryoSleep = 0;
 var ourAge = 18;
 var ourMinor = 1;
+var ourVip = 1;
 app.post("/api/CryoSleep", (req, res) => {
   ourCryoSleep = req.body.selectedValue;
 });
@@ -26,6 +27,10 @@ app.post("/api/age", (req, res) => {
   res.status(200).send("Age Received");
 });
 
+app.post("/api/vip", (req, res) => {
+  ourVip = req.body.selectedVal;
+});
+
 app.listen(process.env.PORT || 5000, function () {
   console.log("Server Up and Running!");
 });
@@ -35,7 +40,7 @@ app.get("/get-request", (req, res) => {
     {
       CryoSleep: ourCryoSleep, //Yes or No Toggle //0 or 1
       Age: ourAge, //Slider //0 - 100
-      VIP: 1, //Toggle Yes or No //0 or 1
+      VIP: ourVip, //Toggle Yes or No //0 or 1
       RoomService: 4200.0, // Expense Number input 0 - 35000
       FoodCourt: 1539.0, //Expense  number input 0 - 35000
       ShoppingMall: 3000.0, //Expense number input 0 - 35000
