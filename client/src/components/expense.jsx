@@ -1,16 +1,14 @@
 import React from "react";
 import { TextField, Button } from "@material-ui/core";
+import axios from "axios";
 
 function Expense(props) {
-  //RoomService FoodCourt ShoppingMall Spa VRDeck Total_Expense 
-  //Set Expenditure need to test
+  //RoomService FoodCourt ShoppingMall Spa VRDeck Total_Expense
   const [RoomService, setRoomService] = React.useState(0);
   const [FoodCourt, setFoodCourt] = React.useState(0);
   const [ShoppingMall, setShoppingMall] = React.useState(0);
   const [Spa, setSpa] = React.useState(0);
   const [VRDeck, setVRDeck] = React.useState(0);
-  const [Total_Expense, setTotal_Expense] = React.useState(0);
-  const [Expenditure, setExpenditure] = React.useState(0);
 
   const handleChange1 = (event) => {
     if (event.target.value < 0) setRoomService(0);
@@ -43,14 +41,20 @@ function Expense(props) {
   };
 
   const calculateTotal = () => {
-    setTotal_Expense(
+    let total =
       parseFloat(RoomService) +
-        parseFloat(FoodCourt) +
-        parseFloat(ShoppingMall) +
-        parseFloat(Spa) +
-        parseFloat(VRDeck)
-    );
-    if(Total_Expense > 0) setExpenditure(1)
+      parseFloat(FoodCourt) +
+      parseFloat(ShoppingMall) +
+      parseFloat(Spa) +
+      parseFloat(VRDeck);
+    axios.post("/api/expense", {
+      roomPass: parseFloat(RoomService),
+      foodPass: parseFloat(FoodCourt),
+      shopPass: parseFloat(ShoppingMall),
+      spaPass: parseFloat(Spa),
+      vrPass: parseFloat(VRDeck),
+      totalPass: total,
+    });
   };
 
   return (
