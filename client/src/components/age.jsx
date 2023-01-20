@@ -3,13 +3,18 @@ import { Slider } from "@material-ui/core";
 
 function Age() {
     // age has value, isMinor
-  const [age, setAge] = React.useState(18);
-  const [isMinor, setIsMinor] = useState(false);
+  const [age, setAge] = useState(18);
 
   const handleChange = (event, newAge) => {
-    if(age < 18) setIsMinor(true);
-    else setIsMinor(false);
     setAge(newAge);
+    fetch("/api/age", {
+      method: "POST",
+      body: JSON.stringify({ age: age }),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));    
   };
   
   return (

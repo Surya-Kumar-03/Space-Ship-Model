@@ -14,9 +14,16 @@ app.get("/", function (req, res) {
 
 var ourCryoSleep = 0;
 var ourAge = 18;
-var ourMinor = false;
+var ourMinor = 1;
 app.post("/api/CryoSleep", (req, res) => {
   ourCryoSleep = req.body.selectedValue;
+});
+
+app.post("/api/age", (req, res) => {
+  ourAge = req.body.age;
+  if(ourAge < 18) ourMinor = 0;
+  else ourMinor = 1;
+  res.status(200).send("Age Received");
 });
 
 app.listen(process.env.PORT || 5000, function () {
