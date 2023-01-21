@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FormControl, Select, MenuItem } from "@material-ui/core";
+import axios from "axios";
 
 const groups = [
   { value: 1, label: "Group 1" },
@@ -10,7 +11,7 @@ const groups = [
   { value: 6, label: "Group 6" },
 ];
 function Group() {
-    //selectedGroup
+  //selectedGroup
   const [selectedGroup, setSelectedGroup] = useState(1);
   return (
     <div
@@ -26,7 +27,12 @@ function Group() {
         <Select
           style={{ marginLeft: "1rem" }}
           value={selectedGroup}
-          onChange={(event) => setSelectedGroup(event.target.value)}
+          onChange={(event) => {
+            setSelectedGroup(event.target.value);
+            axios.post("/api/group", {
+              selectedGroup: event.target.value,
+            });
+          }}
         >
           {groups.map((group) => (
             <MenuItem key={group.value} value={group.value}>

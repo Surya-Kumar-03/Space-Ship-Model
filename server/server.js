@@ -22,6 +22,7 @@ var ourShop = 3000;
 var ourSpa = 0;
 var ourVr = 0;
 var totalExpense = 8739;
+var ourGroup = 1;
 app.post("/api/CryoSleep", (req, res) => {
   ourCryoSleep = req.body.selectedValue;
 });
@@ -44,6 +45,10 @@ app.post("/api/expense", (req, res) => {
   ourSpa = req.body.spaPass;
   ourVr = req.body.vrPass;
   totalExpense = req.body.totalPass;
+});
+
+app.post("/api/group", (req, res) => {
+  ourGroup = req.body.selectedGroup;
 });
 
 app.listen(process.env.PORT || 5000, function () {
