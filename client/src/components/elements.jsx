@@ -68,7 +68,7 @@ function Elements() {
         </div>
       </div>
     );
-  } else if(pageNumber == 3) {
+  } else if(pageNumber === 3) {
     return (<Result></Result>)
   }
 }

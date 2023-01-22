@@ -5,21 +5,22 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node": "16.16.0",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20",
     "@material-ui/core": "^4.12.4",
     "axios": "^1.2.3",
     "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
     "request": "^2.88.2"
   }
 }
