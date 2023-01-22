@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "proxy":"https://space-ship-al4q.onrender.com/",
+  "proxy":"https://space-ship-al4q.onrender.com",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",
