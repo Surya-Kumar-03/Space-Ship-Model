@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import { Select, MenuItem } from "@material-ui/core";
+import axios from "axios";
 
 function DestinationPlanet() {
     //cancriSelected psoSelected trappistSelected
   const [cancriSelected, setCancriSelected] = useState(true);
   const [psoSelected, setPsoSelected] = useState(false);
   const [trappistSelected, setTrappistSelected] = useState(false);
+
+  function callChange(){
+    axios.post("/destinationPlanet", {
+      cancri : cancriSelected,
+      pso : psoSelected,
+      trap : trappistSelected
+    })
+  }
 
   const handleChange = (event) => {
     switch (event.target.value) {
@@ -27,6 +36,7 @@ function DestinationPlanet() {
       default:
         break;
     }
+    callChange();
   };
 
   return (

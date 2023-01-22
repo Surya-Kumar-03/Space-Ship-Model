@@ -23,6 +23,9 @@ var ourSpa = 0;
 var ourVr = 0;
 var totalExpense = 8739;
 var ourGroup = 1;
+var ourCancri = 1;
+var ourPso = 0;
+var ourTrap = 0;
 app.post("/api/CryoSleep", (req, res) => {
   ourCryoSleep = req.body.selectedValue;
 });
@@ -51,6 +54,12 @@ app.post("/api/group", (req, res) => {
   ourGroup = req.body.selectedGroup;
 });
 
+app.post("/destinationPlanet", (req, res) => {
+  ourCancri = req.body.cancri;
+  ourPso = req.body.pso;
+  ourTrap = req.body.trap;
+});
+
 app.listen(process.env.PORT || 5000, function () {
   console.log("Server Up and Running!");
 });
@@ -74,9 +83,9 @@ app.get("/get-request", (req, res) => {
       HomePlanet_Earth: 0, //Choose home planet
       HomePlanet_Europa: 1,
       HomePlanet_Mars: 0,
-      "Destination_55 Cancri e": 0, //Choose Destination planet
-      "Destination_PSO J318.5-22": 0,
-      "Destination_TRAPPIST-1e": 1,
+      "Destination_55 Cancri e": ourCancri, //Choose Destination planet
+      "Destination_PSO J318.5-22": ourPso,
+      "Destination_TRAPPIST-1e": ourTrap,
       Deck_A: 1, // A  - T (Choose Deck Drop-Down)
       Deck_B: 0,
       Deck_C: 0,

@@ -4,12 +4,10 @@ import Age from "./age";
 import Vip from "./vip";
 import Expense from "./expense";
 import Group from "./groups";
-import RoomNumber from "./roomNumber";
 import HomePlanet from "./homePlanet";
 import DestinationPlanet from "./destinationPlanet";
-import DeckSelector from "./decks";
 import { Button } from "@material-ui/core";
-import SideSelector from "./side";
+import Result from "./result";
 
 function Elements() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -45,17 +43,14 @@ function Elements() {
       >
         <h1>Just a few more!</h1>
         <Group></Group>
-        <RoomNumber></RoomNumber>
         <HomePlanet></HomePlanet>
         <DestinationPlanet></DestinationPlanet>
-        <DeckSelector></DeckSelector>
-        <SideSelector></SideSelector>
         <div>
           <Button
             style={{
               fontWeight: "bolder",
               backgroundColor: "gray",
-              margin:"1rem"
+              margin: "1rem",
             }}
             onClick={pageNumberDecrementor}
           >
@@ -73,6 +68,8 @@ function Elements() {
         </div>
       </div>
     );
+  } else if(pageNumber == 3) {
+    return (<Result></Result>)
   }
 }
 
