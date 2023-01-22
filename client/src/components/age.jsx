@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Slider } from "@material-ui/core";
+import { BASE_URL } from "../helper";
 
 function Age() {
     // age has value, isMinor
@@ -7,7 +8,7 @@ function Age() {
 
   const handleChange = (event, newAge) => {
     setAge(newAge);
-    fetch(process.env.NODE_URL + "/api/age", {
+    fetch(BASE_URL + "/api/age", {
       method: "POST",
       body: JSON.stringify({ age: age }),
       headers: { "Content-Type": "application/json" },

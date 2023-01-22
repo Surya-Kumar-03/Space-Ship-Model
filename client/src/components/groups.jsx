@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FormControl, Select, MenuItem } from "@material-ui/core";
 import axios from "axios";
+import { BASE_URL } from "../helper";
 
 const groups = [
   { value: 1, label: "Group 1" },
@@ -29,7 +30,7 @@ function Group() {
           value={selectedGroup}
           onChange={(event) => {
             setSelectedGroup(event.target.value);
-            axios.post(process.env.NODE_URL + "/api/group", {
+            axios.post(BASE_URL + "/api/group", {
               selectedGroup: event.target.value,
             });
           }}

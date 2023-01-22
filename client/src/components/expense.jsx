@@ -1,6 +1,7 @@
 import React from "react";
 import { TextField, Button } from "@material-ui/core";
 import axios from "axios";
+import { BASE_URL } from "../helper";
 
 function Expense(props) {
   //RoomService FoodCourt ShoppingMall Spa VRDeck Total_Expense
@@ -47,7 +48,7 @@ function Expense(props) {
       parseFloat(ShoppingMall) +
       parseFloat(Spa) +
       parseFloat(VRDeck);
-    axios.post(process.env.NODE_URL + "/api/expense", {
+    axios.post(BASE_URL + "/api/expense", {
       roomPass: parseFloat(RoomService),
       foodPass: parseFloat(FoodCourt),
       shopPass: parseFloat(ShoppingMall),

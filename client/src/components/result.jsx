@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { BASE_URL } from "../helper";
 
 function Result() {
   const [display, setDisplay] = useState("Loading...");
 
   async function getPrediction() {
     try {
-      const response = await axios.get(process.env.NODE_URL + "/get-request");
+      const response = await axios.get(BASE_URL + "/get-request");
       setDisplay(response.data.value);
     } catch (error) {
       console.log(error);

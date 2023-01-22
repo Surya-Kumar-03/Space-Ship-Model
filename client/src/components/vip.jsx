@@ -1,13 +1,14 @@
 import React from "react";
 import { FormControlLabel, Radio } from "@material-ui/core";
 import axios from "axios";
+import { BASE_URL } from "../helper";
 
 function Vip() {
   //Result in selectedVIP
   const [selectedVIP, setSelectedValue] = React.useState("1"); //Default is Yes
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
-    axios.post(process.env.NODE_URL + "/api/vip", {
+    axios.post(BASE_URL + "/api/vip", {
       selectedVal : event.target.value
     })
   };

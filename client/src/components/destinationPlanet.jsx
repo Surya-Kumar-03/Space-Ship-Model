@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Select, MenuItem } from "@material-ui/core";
 import axios from "axios";
+import { BASE_URL } from "../helper";
 
 function DestinationPlanet() {
     //cancriSelected psoSelected trappistSelected
@@ -9,7 +10,7 @@ function DestinationPlanet() {
   const [trappistSelected, setTrappistSelected] = useState(false);
 
   function callChange(){
-    axios.post(process.env.NODE_URL + "/destinationPlanet", {
+    axios.post(BASE_URL + "/destinationPlanet", {
       cancri : cancriSelected,
       pso : psoSelected,
       trap : trappistSelected
