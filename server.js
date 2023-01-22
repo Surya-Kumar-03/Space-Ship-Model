@@ -10,8 +10,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "./client/build")));
 
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/public", "/index.html"));
+app.get("*", function (req , res) {
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 var ourCryoSleep = 0;
