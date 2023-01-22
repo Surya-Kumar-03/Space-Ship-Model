@@ -29,7 +29,7 @@ function Group() {
           value={selectedGroup}
           onChange={(event) => {
             setSelectedGroup(event.target.value);
-            axios.post("/api/group", {
+            axios.post(process.env.NODE_URL + "/api/group", {
               selectedGroup: event.target.value,
             });
           }}

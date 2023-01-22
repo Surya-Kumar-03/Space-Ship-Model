@@ -7,7 +7,7 @@ function Vip() {
   const [selectedVIP, setSelectedValue] = React.useState("1"); //Default is Yes
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
-    axios.post("/api/vip", {
+    axios.post(process.env.NODE_URL + "/api/vip", {
       selectedVal : event.target.value
     })
   };

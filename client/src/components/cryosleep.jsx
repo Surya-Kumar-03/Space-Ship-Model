@@ -7,7 +7,7 @@ function CryoSleep() {
   const [selectedValue, setSelectedValue] = React.useState("1"); //Default is Yes
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
-    axios.post("/api/CryoSleep", {
+    axios.post(process.env.NODE_URL + "/api/CryoSleep", {
       selectedValue: event.target.value
     })
   };

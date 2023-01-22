@@ -4,7 +4,10 @@ const path = require("path");
 const request = require("request");
 const app = express();
 require("dotenv").config();
+var cors = require('cors')
 
+
+app.use(cors()) 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "./client/build")));

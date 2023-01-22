@@ -9,7 +9,7 @@ function DestinationPlanet() {
   const [trappistSelected, setTrappistSelected] = useState(false);
 
   function callChange(){
-    axios.post("/destinationPlanet", {
+    axios.post(process.env.NODE_URL + "/destinationPlanet", {
       cancri : cancriSelected,
       pso : psoSelected,
       trap : trappistSelected

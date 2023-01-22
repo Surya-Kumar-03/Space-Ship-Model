@@ -47,7 +47,7 @@ function Expense(props) {
       parseFloat(ShoppingMall) +
       parseFloat(Spa) +
       parseFloat(VRDeck);
-    axios.post("/api/expense", {
+    axios.post(process.env.NODE_URL + "/api/expense", {
       roomPass: parseFloat(RoomService),
       foodPass: parseFloat(FoodCourt),
       shopPass: parseFloat(ShoppingMall),

@@ -7,7 +7,7 @@ function Result() {
 
   async function getPrediction() {
     try {
-      const response = await axios.get("/get-request");
+      const response = await axios.get("https://space-ship-al4q.onrender.com/get-request");
       setDisplay(response.data.value);
     } catch (error) {
       console.log(error);

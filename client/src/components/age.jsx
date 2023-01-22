@@ -7,7 +7,7 @@ function Age() {
 
   const handleChange = (event, newAge) => {
     setAge(newAge);
-    fetch("/api/age", {
+    fetch(process.env.NODE_URL + "/api/age", {
       method: "POST",
       body: JSON.stringify({ age: age }),
       headers: { "Content-Type": "application/json" },
