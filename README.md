@@ -1,5 +1,5 @@
 # Space-Ship-Model
-A cross-domain (Web-ML) application that makes appropriate predictions for an astronaut's survival by passing necessary parameters.
+A cross-domain (Web-ML) application that makes appropriate predictions for an astronaut's survival by passing necessary parameters. You can find the Repository of the ML Model [here](https://github.com/abhishekmani12/Model_as_API).
 ## [Give it a try!](https://space-ship-model.netlify.app/)
 
 # Tech-Used:
@@ -15,8 +15,6 @@ A cross-domain (Web-ML) application that makes appropriate predictions for an a
 - Netlify(Front-End)
 - Render(Back-End)
 - AWS Elastic Beanstalk - EC2 S2 Bucket (ML Model)
-
-You can find the Repository of the ML Model [here](https://github.com/abhishekmani12/Model_as_API).
 
 # Snapshots of the App:
 ![image](https://user-images.githubusercontent.com/89148170/213921618-7abc42fd-f680-4c27-a2ea-d0f473ed008c.png)
