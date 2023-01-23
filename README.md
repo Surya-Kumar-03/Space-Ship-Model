@@ -16,6 +16,8 @@ A cross-domain (Web-ML) application that makes appropriate predictions for an a
 - Render(Back-End)
 - AWS Elastic Beanstalk - EC2 S2 Bucket (ML Model)
 
+You can find the Repository of the ML Model [here](https://github.com/abhishekmani12/Model_as_API).
+
 # Snapshots of the App:
 ![image](https://user-images.githubusercontent.com/89148170/213921618-7abc42fd-f680-4c27-a2ea-d0f473ed008c.png)
 ![image](https://user-images.githubusercontent.com/89148170/213921666-2265f10d-aaf2-46fe-975e-35887a2977c4.png)
