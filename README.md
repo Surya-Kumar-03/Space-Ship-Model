@@ -2,7 +2,7 @@
 A cross-domain (Web-ML) application that makes appropriate predictions for an astronaut's survival by passing necessary parameters. You can find the Repository of the ML Model [here](https://github.com/abhishekmani12/Model_as_API).
 ## [Give it a try!](https://space-ship-model.netlify.app/)
 
-## Tech-Used:
+## Tech:
 - ReactJS
 - NodeJS
 - ExpressJS
@@ -16,12 +16,12 @@ A cross-domain (Web-ML) application that makes appropriate predictions for an a
 - Render(Back-End)
 - AWS Elastic Beanstalk - EC2 S2 Bucket (ML Model)
 
-## Installation
+## Installation:
 
 The Project requires [Node.js](https://nodejs.org/) v10+ to run.
 
 Install the dependencies and devDependencies and start the server.
-Front-End Setup
+Front-End Setup:
 
 ```sh
 cd client
@@ -29,7 +29,7 @@ npm install
 ```
 
 
-Back-End Setup
+Back-End Setup:
 In the root directory, run
 ```sh
 npm install
